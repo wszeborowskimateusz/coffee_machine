@@ -1,16 +1,15 @@
-# vgv_coffee_machine
+# Coffee Machine
 
-Flutter project that allows to save favourite coffee pictures
+Flutter project that allows to browse via random coffee images (from https://coffee.alexflipnote.dev) and save the favourites.
+
+The favourite pictures should be accessible even when there is no Internet access.
+
+
+
+https://user-images.githubusercontent.com/31158740/202196697-d371cad2-f382-44c4-b152-a9a32ec79bd2.mov
+
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To run the app, you should simply run flutter run (with Flutter version 3.3.8). The app should run on both Android and iOS. 
