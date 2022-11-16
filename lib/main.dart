@@ -1,18 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:vgv_coffee_machine/core/services/dependency_injection/get_it.dart';
+import 'package:vgv_coffee_machine/core/services/navigation/router.gr.dart';
+import 'package:vgv_coffee_machine/core/ui/widgets/cubit_widget.dart';
+import 'package:vgv_coffee_machine/features/settings/domain/models/custom_theme_mode.dart';
+import 'package:vgv_coffee_machine/features/settings/ui/cubits/app_theme_cubit.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies();
+
+  runApp(CoffeeMachineApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CoffeeMachineApp extends CubitWidget<AppThemeCubit, CustomThemeMode> {
+  final _appRouter = AppRouter();
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context, _, CustomThemeMode themeMode, __) {
+    return MaterialApp.router(
       title: 'Coffee Machine',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: Container(),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
+      themeMode: themeMode.themeMode,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
     );
   }
 }
