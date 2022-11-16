@@ -1,0 +1,12 @@
+{
+    "favouritesEmptyStateTitle": "Nothing here",
+    "favouritesEmptyStateBody": "Browse images and select your favourites",
+    "imageLoadingFailed": "Image loading failed",
+    "changeTheme": "Change theme",
+    "swipe": "Swipe",
+    "favourites": "Favourites",
+    "settings": "Settings",
+    "coreErrorWidgetTitle": "Oops something went wrong",
+    "coreErrorWidgetCta": "Refresh",
+    "errorSavingPhotoSnackbarText": "An error occurred when saving the image"
+}

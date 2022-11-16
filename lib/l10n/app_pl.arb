@@ -1,0 +1,12 @@
+{
+  "favouritesEmptyStateTitle": "Nic tu nie ma",
+  "favouritesEmptyStateBody": "Przeglądaj obrazki i wybierz swoje ulubione",
+  "imageLoadingFailed": "Nieudało się wczytać obrazka",
+  "changeTheme": "Zmień motyw",
+  "swipe": "Przeglądaj",
+  "favourites": "Ulubione",
+  "settings": "Ustawienia",
+  "coreErrorWidgetTitle": "Coś poszło nie tak",
+  "coreErrorWidgetCta": "Odśwież",
+  "errorSavingPhotoSnackbarText": "Coś poszło nie tak przy zapisywaniu obrazka"
+}
