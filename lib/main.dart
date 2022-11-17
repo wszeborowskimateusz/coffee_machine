@@ -15,6 +15,8 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
 
+  Log.init();
+
   FlutterError.onError = (details) {
     Log.error(details.exceptionAsString(), details.exception, details.stack);
   };
