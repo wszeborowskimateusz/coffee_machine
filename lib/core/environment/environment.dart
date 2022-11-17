@@ -1,26 +1,31 @@
 import 'package:injectable/injectable.dart';
 import 'package:vgv_coffee_machine/core/constants/constants.dart';
 import 'package:vgv_coffee_machine/core/environment/dart_defines.dart';
+import 'package:vgv_coffee_machine/core/services/dependency_injection/get_it.dart';
 
 enum Environment { dev, prod }
 
 @singleton
 class EnvironmentConfig {
-  late final Environment currentEnvironment;
+  final Environment currentEnvironment;
 
-  EnvironmentConfig() {
-    currentEnvironment = _extractCurrentEnvironmentFromDartDefine();
+  const EnvironmentConfig(this.currentEnvironment);
+
+  @factoryMethod
+  factory EnvironmentConfig.init() {
+    return EnvironmentConfig(_extractCurrentEnvironmentFromDartDefine());
   }
 
-  Environment _extractCurrentEnvironmentFromDartDefine() {
-    switch (DartDefines.environment) {
+  static Environment _extractCurrentEnvironmentFromDartDefine() {
+    final envString = getIt<DartDefines>().environment;
+    switch (envString) {
       case Constants.environmentDev:
         return Environment.dev;
       case Constants.environmentProd:
         return Environment.prod;
       default:
         throw ArgumentError(
-          'Following environment: ${DartDefines.environment} is not supported',
+          'Following environment: $envString is not supported',
         );
     }
   }

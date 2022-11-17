@@ -1,4 +1,5 @@
 import 'package:vgv_coffee_machine/core/domain/models/coffee_image.dart';
+import 'package:vgv_coffee_machine/core/errors/exceptions.dart';
 import 'package:vgv_coffee_machine/core/errors/failure.dart';
 import 'package:vgv_coffee_machine/features/settings/domain/models/custom_theme_mode.dart';
 
@@ -11,5 +12,7 @@ const List<CoffeeImage> tCoffeeImages = [
 ];
 
 const tGeneralFailure = GeneralFailure('');
+
+const tServerException = ServerException('');
 
 const tCustomThemeMode = CustomThemeMode.light;

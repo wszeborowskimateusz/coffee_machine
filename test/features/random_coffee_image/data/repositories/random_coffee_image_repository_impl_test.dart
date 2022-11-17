@@ -1,5 +1,7 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:vgv_coffee_machine/core/errors/failure.dart';
 import 'package:vgv_coffee_machine/core/extensions/either_extensions.dart';
 import 'package:vgv_coffee_machine/features/random_coffee_image/data/data_sources/random_coffee_image_remote_data_source.dart';
 import 'package:vgv_coffee_machine/features/random_coffee_image/data/repositories/random_coffee_image_repository_impl.dart';
@@ -29,6 +31,20 @@ void main() {
       // Assert
       expect(response.isRight(), isTrue);
       expect(response.extractRight(), tCoffeeImage);
+      verify(() => remoteDataSourceMock.getRandomCoffeeImage()).called(1);
+    });
+
+    test('Should properly react to server exception', () async {
+      // Arrange
+      when(() => remoteDataSourceMock.getRandomCoffeeImage())
+          .thenThrow(tServerException);
+
+      // Act
+      final response = await repository.getRandomCoffeeImage();
+
+      // Assert
+      expect(response.isLeft(), isTrue);
+      expect(response, const Left(ServerFailure('getRandomCoffeeImage')));
       verify(() => remoteDataSourceMock.getRandomCoffeeImage()).called(1);
     });
 
