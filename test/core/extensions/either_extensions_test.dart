@@ -16,18 +16,4 @@ void main() {
       expect(() => const Left(null).extractRight(), throwsA(isA<TypeError>()));
     });
   });
-
-  group('foldOrNull', () {
-    test('Should extract the value if Either is Right', () {
-      expect(const Right(1).foldOrNull(), 1);
-      expect(const Right('a').foldOrNull(), 'a');
-      expect(const Right(null).foldOrNull(), isNull);
-    });
-
-    test('Should return null if Either is Left', () {
-      expect(const Left(1).foldOrNull(), isNull);
-      expect(const Left('a').foldOrNull(), isNull);
-      expect(const Left(null).foldOrNull(), isNull);
-    });
-  });
 }
