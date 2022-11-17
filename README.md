@@ -19,7 +19,7 @@ You should have flutter *3.3.8*
 The following dart defines are supported by the app
 | Name | Possible values | Default value | What it does |
 | :-----: | :------------: |:---: | :---: |
-| DART_DEFINE_ENV | `PROD`|`DEV`   / `DEV` | configures dart app (currently disables logging for PROD) |
+| DART_DEFINE_ENV | `PROD`/`DEV` | configures dart app (currently disables logging for PROD) |
 | DART_DEFINE_APP_NAME | Any string   | Coffee Machine | specifies app display name |
 | DART_DEFINE_APP_SUFFIX | `(empty)`/`.dev`   | `(empty)` | specifies app id suffix |
 
