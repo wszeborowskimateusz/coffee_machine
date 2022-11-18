@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:vgv_coffee_machine/core/localizations/localizations.dart';
-import 'package:vgv_coffee_machine/core/services/navigation/router.gr.dart';
+import 'package:vgv_coffee_machine/core/navigation/router.gr.dart';
 import 'package:vgv_coffee_machine/core/ui/core_colors.dart';
 import 'package:vgv_coffee_machine/core/ui/core_dimensions.dart';
 import 'package:vgv_coffee_machine/core/ui/core_icons.dart';

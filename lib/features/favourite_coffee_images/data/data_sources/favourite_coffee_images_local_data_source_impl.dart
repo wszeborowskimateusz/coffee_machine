@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:injectable/injectable.dart';
 import 'package:vgv_coffee_machine/core/domain/models/coffee_image.dart';
-import 'package:vgv_coffee_machine/core/services/local_storage/local_storage_service.dart';
-import 'package:vgv_coffee_machine/core/services/local_storage/local_storage_service_keys.dart';
+import 'package:vgv_coffee_machine/core/local_storage/local_storage_service.dart';
+import 'package:vgv_coffee_machine/core/local_storage/local_storage_service_keys.dart';
 import 'package:vgv_coffee_machine/features/favourite_coffee_images/data/data_sources/favourite_coffee_images_local_data_source.dart';
 
 @LazySingleton(as: FavouriteCoffeeImagesLocalDataSource)

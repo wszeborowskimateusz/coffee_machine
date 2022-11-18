@@ -1,6 +1,6 @@
 import 'package:logger/logger.dart';
+import 'package:vgv_coffee_machine/core/dependency_injection/get_it.dart';
 import 'package:vgv_coffee_machine/core/environment/environment.dart';
-import 'package:vgv_coffee_machine/core/services/dependency_injection/get_it.dart';
 
 class Log {
   static late final Logger _logger;

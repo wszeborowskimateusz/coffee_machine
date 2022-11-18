@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:vgv_coffee_machine/core/constants/constants.dart';
-import 'package:vgv_coffee_machine/core/services/local_storage/local_storage_service.dart';
-import 'package:vgv_coffee_machine/core/services/local_storage/local_storage_service_keys.dart';
+import 'package:vgv_coffee_machine/core/local_storage/local_storage_service.dart';
+import 'package:vgv_coffee_machine/core/local_storage/local_storage_service_keys.dart';
 import 'package:vgv_coffee_machine/features/settings/data/data_sources/settings_local_data_source.dart';
 import 'package:vgv_coffee_machine/features/settings/data/data_sources/settings_local_data_source_impl.dart';
 import 'package:vgv_coffee_machine/features/settings/domain/models/custom_theme_mode.dart';

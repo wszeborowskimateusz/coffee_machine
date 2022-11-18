@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vgv_coffee_machine/core/services/dependency_injection/get_it.dart';
+import 'package:vgv_coffee_machine/core/dependency_injection/get_it.dart';
 import 'package:vgv_coffee_machine/core/ui/widgets/cubit_widget.dart';
 
 import '../../../test_utils/make_testable_widget.dart';

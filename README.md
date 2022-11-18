@@ -23,8 +23,12 @@ The following dart defines are supported by the app
 | DART_DEFINE_APP_NAME | Any string   | Coffee Machine | specifies app display name |
 | DART_DEFINE_APP_SUFFIX | `(empty)`/`.dev`   | `(empty)` | specifies app id suffix |
 
+#### Run the app
 1. Run `flutter pub get` command to get all the dependencies
 2. Run `flutter run` command to open the app
+
+To run the app with specific (non default) value of dart defines run
+`flutter run --dart-define=DART_DEFINE_ENV=PROD --dart-define=DART_DEFINE_APP_NAME="Some app name" --dart-define=DART_DEFINE_APP_SUFFIX=.dev`
 
 The app should run on both Android and iOS.
 

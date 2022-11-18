@@ -7,6 +7,8 @@ import 'package:vgv_coffee_machine/features/settings/ui/cubits/app_theme_cubit.d
 
 import 'mocks.dart';
 
+/// Prepares the [widget] by wrapping it with necessary widgets
+/// like [MaterialApp]. Also provides translations and [AppThemeCubit]
 Widget makeTestableWidget(Widget widget) {
   final appThemeCubit = AppThemeCubitMock();
   const themeMode = Constants.defaultThemeMode;

@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vgv_coffee_machine/core/services/dependency_injection/get_it.dart';
+import 'package:vgv_coffee_machine/core/dependency_injection/get_it.dart';
 
+/// Helper widget to perform repetitive cubit tasks
+///
+/// It gets the proper cubit from getIt during initState
+/// It closes the cubit on dispose (so cubit must be register as a factory or must be top level cubit)
+///
+/// When your widget requires widget state to declare things that need dispose
+/// (like text field controllers), then you need to extend [CubitWidgetState]
+/// and override [createState] function. You will receive this widget state
+/// in [build] function
 abstract class CubitWidget<C extends BlocBase<S>, S> extends StatefulWidget {
   void initState(C cubit) {}
 

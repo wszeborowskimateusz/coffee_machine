@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vgv_coffee_machine/core/services/logging/logger.dart';
+import 'package:vgv_coffee_machine/core/logging/log.dart';
 
 class AppBlocObserver extends BlocObserver {
   @override

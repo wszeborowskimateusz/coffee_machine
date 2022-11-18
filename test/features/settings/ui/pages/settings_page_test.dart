@@ -2,7 +2,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:vgv_coffee_machine/core/constants/constants.dart';
-import 'package:vgv_coffee_machine/core/services/dependency_injection/get_it.dart';
+import 'package:vgv_coffee_machine/core/dependency_injection/get_it.dart';
 import 'package:vgv_coffee_machine/core/ui/core_icons.dart';
 import 'package:vgv_coffee_machine/features/settings/ui/cubits/app_theme_cubit.dart';
 import 'package:vgv_coffee_machine/features/settings/ui/pages/settings_page.dart';

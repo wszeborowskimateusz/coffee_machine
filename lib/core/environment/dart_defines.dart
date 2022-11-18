@@ -1,8 +1,11 @@
 import 'package:injectable/injectable.dart';
-import 'package:vgv_coffee_machine/core/constants/constants.dart';
+import 'package:vgv_coffee_machine/core/environment/environment.dart';
 
 @singleton
 class DartDefines {
+  /// Dart define key for setting up environment
+  static const String _dartDefineEnvironment = 'DART_DEFINE_ENV';
+
   final String environment;
 
   const DartDefines(this.environment);
@@ -10,8 +13,8 @@ class DartDefines {
   @factoryMethod
   factory DartDefines.init() => const DartDefines(
         String.fromEnvironment(
-          Constants.dartDefineEnvironment,
-          defaultValue: Constants.environmentDev,
+          _dartDefineEnvironment,
+          defaultValue: EnvironmentConfig.environmentDevString,
         ),
       );
 }

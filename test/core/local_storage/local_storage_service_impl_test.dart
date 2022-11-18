@@ -2,10 +2,10 @@ import 'package:collection/collection.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:vgv_coffee_machine/core/services/local_storage/local_storage_service.dart';
-import 'package:vgv_coffee_machine/core/services/local_storage/local_storage_service_impl.dart';
+import 'package:vgv_coffee_machine/core/local_storage/local_storage_service.dart';
+import 'package:vgv_coffee_machine/core/local_storage/local_storage_service_impl.dart';
 
-import '../../../test_utils/mocks.dart';
+import '../../test_utils/mocks.dart';
 
 void main() {
   const String key = 'some key';

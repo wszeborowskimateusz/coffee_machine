@@ -1,4 +1,4 @@
 abstract class Endpoints {
-  static String get randomCoffeeImage =>
+  static const String randomCoffeeImage =
       'https://coffee.alexflipnote.dev/random.json';
 }

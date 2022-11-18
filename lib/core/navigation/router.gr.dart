@@ -14,12 +14,12 @@
 import 'package:auto_route/auto_route.dart' as _i5;
 import 'package:flutter/material.dart' as _i6;
 
-import '../../../features/favourite_coffee_images/ui/pages/favourites_coffee_images_page.dart'
+import '../../features/favourite_coffee_images/ui/pages/favourites_coffee_images_page.dart'
     as _i3;
-import '../../../features/random_coffee_image/ui/pages/random_coffee_image_page.dart'
+import '../../features/random_coffee_image/ui/pages/random_coffee_image_page.dart'
     as _i2;
-import '../../../features/settings/ui/pages/settings_page.dart' as _i4;
-import '../../ui/pages/home_page.dart' as _i1;
+import '../../features/settings/ui/pages/settings_page.dart' as _i4;
+import '../ui/pages/home_page.dart' as _i1;
 
 class AppRouter extends _i5.RootStackRouter {
   AppRouter([_i6.GlobalKey<_i6.NavigatorState>? navigatorKey])

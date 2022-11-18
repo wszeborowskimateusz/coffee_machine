@@ -7,6 +7,9 @@ import 'package:vgv_coffee_machine/core/extensions/list_extensions.dart';
 import 'package:vgv_coffee_machine/features/favourite_coffee_images/domain/repositories/favourite_coffee_images_repository.dart';
 
 @lazySingleton
+
+/// Removes given image from favourites
+/// Returns success if image was not present and when image was successfully removed
 class UnsaveCoffeeImageFromFavouritesUseCase
     extends UseCase<Future<Either<Failure, void>>, CoffeeImage> {
   final FavouriteCoffeeImagesRepository _repository;

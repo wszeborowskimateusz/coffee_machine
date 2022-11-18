@@ -6,6 +6,9 @@ import 'package:vgv_coffee_machine/core/errors/failure.dart';
 import 'package:vgv_coffee_machine/features/favourite_coffee_images/domain/repositories/favourite_coffee_images_repository.dart';
 
 @lazySingleton
+
+/// Saves given image to favourites (at the start of the list)
+/// Returns success if image was already in favourites and when image was successfully added
 class SaveCoffeeImageAsFavouriteUseCase
     extends UseCase<Future<Either<Failure, void>>, CoffeeImage> {
   final FavouriteCoffeeImagesRepository _repository;

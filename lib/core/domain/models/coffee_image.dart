@@ -4,6 +4,9 @@ part 'coffee_image.freezed.dart';
 part 'coffee_image.g.dart';
 
 @freezed
+
+/// Data class that represents a coffee image. It is represented by
+/// image [url]
 class CoffeeImage with _$CoffeeImage {
   @JsonSerializable(explicitToJson: true)
   const factory CoffeeImage({

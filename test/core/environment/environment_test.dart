@@ -1,15 +1,14 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vgv_coffee_machine/core/constants/constants.dart';
+import 'package:vgv_coffee_machine/core/dependency_injection/get_it.dart';
 import 'package:vgv_coffee_machine/core/environment/dart_defines.dart';
 import 'package:vgv_coffee_machine/core/environment/environment.dart';
-import 'package:vgv_coffee_machine/core/services/dependency_injection/get_it.dart';
 
 class _TestDartDefinesDev extends DartDefines {
-  _TestDartDefinesDev() : super(Constants.environmentDev);
+  _TestDartDefinesDev() : super(EnvironmentConfig.environmentDevString);
 }
 
 class _TestDartDefinesProd extends DartDefines {
-  _TestDartDefinesProd() : super(Constants.environmentProd);
+  _TestDartDefinesProd() : super(EnvironmentConfig.environmentProdString);
 }
 
 class _TestDartDefinesInvalid extends DartDefines {

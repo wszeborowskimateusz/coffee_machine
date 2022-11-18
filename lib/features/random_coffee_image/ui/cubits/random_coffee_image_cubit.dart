@@ -27,6 +27,8 @@ class RandomCoffeeImageCubit extends Cubit<RandomCoffeeImageState> {
     return super.close();
   }
 
+  /// Generate [numberOfImagesPerFetch] new random coffee images overriding the previous ones
+  /// Emits failure only when fetching all images failed
   Future<void> generateNewRandomImages() async {
     _disposeMatchEngineIfPresent();
 

@@ -9,12 +9,13 @@ import 'package:dio/dio.dart' as _i4;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:shared_preferences/shared_preferences.dart' as _i10;
+import 'package:vgv_coffee_machine/core/dependency_injection/get_it.dart'
+    as _i31;
 import 'package:vgv_coffee_machine/core/environment/dart_defines.dart' as _i3;
 import 'package:vgv_coffee_machine/core/environment/environment.dart' as _i5;
-import 'package:vgv_coffee_machine/core/services/core_services.dart' as _i31;
-import 'package:vgv_coffee_machine/core/services/local_storage/local_storage_service.dart'
+import 'package:vgv_coffee_machine/core/local_storage/local_storage_service.dart'
     as _i12;
-import 'package:vgv_coffee_machine/core/services/local_storage/local_storage_service_impl.dart'
+import 'package:vgv_coffee_machine/core/local_storage/local_storage_service_impl.dart'
     as _i13;
 import 'package:vgv_coffee_machine/features/favourite_coffee_images/data/data_sources/favourite_coffee_images_local_data_source.dart'
     as _i19;
@@ -73,9 +74,9 @@ Future<_i1.GetIt> $initGetIt(
     environment,
     environmentFilter,
   );
-  final coreServices = _$CoreServices();
+  final coreExternalServices = _$CoreExternalServices();
   gh.singleton<_i3.DartDefines>(_i3.DartDefines.init());
-  gh.factory<_i4.Dio>(() => coreServices.dio);
+  gh.factory<_i4.Dio>(() => coreExternalServices.dio);
   gh.singleton<_i5.EnvironmentConfig>(_i5.EnvironmentConfig.init());
   gh.lazySingleton<_i6.RandomCoffeeImageRemoteDataSource>(
       () => _i7.RandomCoffeeImageRemoteDataSourceImpl(get<_i4.Dio>()));
@@ -83,7 +84,7 @@ Future<_i1.GetIt> $initGetIt(
       _i9.RandomCoffeeImageRepositoryImpl(
           get<_i6.RandomCoffeeImageRemoteDataSource>()));
   await gh.factoryAsync<_i10.SharedPreferences>(
-    () => coreServices.sharedPreferences,
+    () => coreExternalServices.sharedPreferences,
     preResolve: true,
   );
   gh.lazySingleton<_i11.GetRandomCoffeeImageUseCase>(() =>
@@ -133,4 +134,4 @@ Future<_i1.GetIt> $initGetIt(
   return get;
 }
 
-class _$CoreServices extends _i31.CoreServices {}
+class _$CoreExternalServices extends _i31.CoreExternalServices {}

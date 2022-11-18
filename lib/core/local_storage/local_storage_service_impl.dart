@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:vgv_coffee_machine/core/services/local_storage/local_storage_service.dart';
+import 'package:vgv_coffee_machine/core/local_storage/local_storage_service.dart';
 
 @Singleton(as: LocalStorageService)
 class LocalStorageServiceImpl extends LocalStorageService {
