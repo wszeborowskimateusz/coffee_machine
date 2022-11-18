@@ -7,7 +7,7 @@ import 'package:vgv_coffee_machine/core/dependency_injection/get_it.config.dart'
 final getIt = GetIt.instance;
 
 @InjectableInit(preferRelativeImports: false)
-Future<void> configureDependencies() => $initGetIt(getIt);
+Future<GetIt> configureDependencies() => $initGetIt(getIt);
 
 @module
 abstract class CoreExternalServices {
